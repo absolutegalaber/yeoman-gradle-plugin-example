@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.absolutegalaber:yeoman-gradle-plugin:0.2.0'
+        classpath 'org.absolutegalaber:yeoman-gradle-plugin:0.3.0'
         classpath 'com.sahlbach.gradle:gradle-jetty-eclipse-plugin:1.9.2'
     }
 }
