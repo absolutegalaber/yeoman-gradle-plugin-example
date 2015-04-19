@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        maven {
+            url 'http://dl.bintray.com/esistegalaber/maven/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.absolutegalaber:yeoman-gradle-plugin:0.2.0'
+        classpath 'com.sahlbach.gradle:gradle-jetty-eclipse-plugin:1.9.2'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'org.absolutegalaber.yeoman'
+apply plugin: 'jettyEclipse'
+
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+}
+
+build.dependsOn 'gruntBuild'
+
+war {
+    from 'yo/dist' // adds a file-set to the root of the archive
+}
